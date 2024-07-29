@@ -1,0 +1,91 @@
+.page-sidebar .sidebar-header {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  background-color: #272b35;
+  border-bottom: 1px solid #232730;
+  color: #fff;
+  width: 100%;
+  padding: 0 20px;
+  padding-left: 30px;
+  clear: both;
+  z-index: 10;
+  position: relative;
+}
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.btn-animated {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.btn-animated > span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.btn-animated:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 2.5;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn-animated:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn-animated.from-top:before {
+  left: 0;
+  top: -100%;
+}
+.btn-animated.from-top:hover:before,
+.btn-animated.from-top.show-icon:before {
+  top: 0;
+}
+.btn-animated.from-top:hover > span,
+.btn-animated.from-top.show-icon > span {
+  -webkit-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  transform: translateY(300%);
+}
+.btn-animated.from-left:before {
+  left: -100%;
+  top: 0;
+}
+.btn-animated.from-left:hover:before,
+.btn-animated.from-left.show-icon:before {
+  left: 0;
+}
+.btn-animated.from-left:hover > span,
+.btn-animated.from-left.show-icon > span {
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
+.btn-animated.fa:before {
+  font-family: FontAwesome;
+}
+.btn-animated.pg:before {
+  font-family: "pages-icon";
+}
+
